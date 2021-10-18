@@ -1,3 +1,9 @@
+// Overlay für Punkte zur Daseinsvorsorge
+let overlays = {
+    dasein: L.featureGroup()
+};
+
+// Karte initialisieren
 let map = L.map(`map`, {
     center: [47.267222, 11.392778],
     zoom: 12,
@@ -5,6 +11,9 @@ let map = L.map(`map`, {
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
     ]
 })
+
+// Overlay zur Layer Control hinzufügen
+
 // Leaflet hash einfügen
 new L.Hash(map);
 
