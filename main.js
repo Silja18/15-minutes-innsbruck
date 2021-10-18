@@ -13,6 +13,23 @@ let map = L.map(`map`, {
 })
 
 // Overlay zur Layer Control hinzufügen
+let layerControl = L.control.layers({
+    "Daseinsvorsorge": overlays.dasein,
+}).addTo(map);
+
+// Overlays nach dem Laden anzeigen
+overlays.dasein.addTo(map);
+
+// hier weiter machen um Daseinsvorsorge Daten zu visualisieren
+let drawDasein = (geojsonData) => {
+    L.geojsonData(geojsonData), {
+        onEachFeauture: (feature, layer) => {
+            layer.bindPopup(`<strong>${feature.properties.LINE_NAME}</strong>
+            <hr>
+            `)
+        }
+    }
+}
 
 // Leaflet hash einfügen
 new L.Hash(map);
