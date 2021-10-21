@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,51 +11,59 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto+Condensed:ital@0;1&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet-src.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet-src.min.js"></script>
 
-        <!--Leaflet CSS--> 
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/> 
-   <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
- integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
- crossorigin=""></script>
+    <!--Leaflet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 
- <!-- leaflet hash einfügen-->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.js" integrity="sha512-2KBa5eJPxTH3HX7jCWrbO+NYNLV8xrnX5lDB7FTs9HFJ8jpO1MTV6MkmNNaia79k+xOk8q965FkqAjwEYCfDAA==" crossorigin="anonymous"></script>
+    <!-- leaflet hash einfügen-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.js"
+        integrity="sha512-2KBa5eJPxTH3HX7jCWrbO+NYNLV8xrnX5lDB7FTs9HFJ8jpO1MTV6MkmNNaia79k+xOk8q965FkqAjwEYCfDAA=="
+        crossorigin="anonymous"></script>
 
- <!--Reachability-->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/trafforddatalab/leaflet.reachability@v2.0.1/leaflet.reachability.css"/>
- <script src="https://cdn.jsdelivr.net/gh/trafforddatalab/leaflet.reachability@v2.0.1/leaflet.reachability.js"></script>
+    <!--Reachability-->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/trafforddatalab/leaflet.reachability@v2.0.1/leaflet.reachability.css" />
+    <script src="https://cdn.jsdelivr.net/gh/trafforddatalab/leaflet.reachability@v2.0.1/leaflet.reachability.js">
+    </script>
 
-  
+
     <link rel="stylesheet" href="main.css">
-   <script defer src="main.js"></script>>
-   <!-- Farbdefinitionen -->
-   <script src="colors.js"></script>
-   <!--OGD Innsbruck Datenobjekt-->
-   <script src="ogdtirol.js"></script> 
+    <script defer src="main.js"></script>>
+    <!-- Farbdefinitionen -->
+    <script src="colors.js"></script>
+    <!--OGD Innsbruck Datenobjekt-->
+    <script src="ogdtirol.js"></script>
     <title>15-Minuten-Stadt Innsbruck</title>
 </head>
+
 <body>
-   <header>
-       <img class="banner" src="images/IMG_20210930_175512_1280.jpg" alt="Picture of the Inn River in the centre of Innsbruck" style="width: 1280px">
-       <p class="white">Silja Baumann</p> 
-       <h1>15-Minuten-Stadt Innsbruck</h1>
-       <nav>
-        <address>
-            <a href="mailto:silja.baumann@student.uibk.ac.at"><i class="fas fa-envelope-square mr-3"></i>Silja Baumann</a>
-        </address>
-    </nav>
-   </header>
-   <main>
-       <h2>Innsbruck Karte</h2>
-       <div id="map"></div>
-   </main>
-   <footer>
-       <p>Diese Seite ist noch in Bearbeitung</p>
-   </footer>
+    <header>
+        <img class="banner" src="images/IMG_20210930_175512_1280.jpg"
+            alt="Picture of the Inn River in the centre of Innsbruck" style="width: 1280px">
+        <p class="white">Silja Baumann</p>
+        <h1>15-Minuten-Stadt Innsbruck</h1>
+        <nav>
+            <address>
+                <a href="mailto:silja.baumann@student.uibk.ac.at"><i class="fas fa-envelope-square mr-3"></i>Silja
+                    Baumann</a>
+            </address>
+        </nav>
+    </header>
+    <main>
+        <h2>Innsbruck Karte</h2>
+        <div id="map"></div>
+    </main>
+    <footer>
+        <p>Diese Seite ist noch in Bearbeitung</p>
+    </footer>
 </body>
+
 </html>
