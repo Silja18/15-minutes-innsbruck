@@ -59,7 +59,7 @@ let drawDasein = (geojsonData) => {
                 })
             })
         },
-        attribution: `<a href="://data-tiris.opendata.arcgis.com/search?tags=US">Land Tirol</a>`
+        attribution: `<a href="https://mapicons.mapsmarker.com">Maps Icons Collection</a>`
     }).addTo(overlays.dasein);
 }
 
