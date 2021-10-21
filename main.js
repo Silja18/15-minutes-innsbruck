@@ -22,13 +22,24 @@ overlays.dasein.addTo(map);
 
 // hier weiter machen um Daseinsvorsorge Daten zu visualisieren
 let drawDasein = (geojsonData) => {
-    L.geojsonData(geojsonData), {
+    L.geojsonData(geojsonData, { //geoJSON Aufruf von leaflet Bibliothek
         onEachFeauture: (feature, layer) => {
-            layer.bindPopup(`<strong>${feature.properties.LINE_NAME}</strong>
+            layer.bindPopup(`<strong>${feature.properties.NAME}</strong>
             <hr>
+            Station: ${feature.properties.Name}
             `)
-        }
-    }
+        },
+        pointToLayer: (geoJSONPoint, latlng,) =>
+        {
+            return L.marker(latlng, {
+                icon: L.icon({
+                    iconUrl: `icons/welfareroom.png`,
+                    iconSize: [38,38]
+                })
+            })
+        },
+        attribution: `<a href="://data-tiris.opendata.arcgis.com/search?tags=US">Land Tirol</a>`
+    }).addTo(overlays.dasein);
 }
 
 // Leaflet hash einfügen
