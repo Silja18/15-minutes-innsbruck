@@ -41,20 +41,18 @@ let layerControl = L.control.layers({
 // Overlays nach dem Laden anzeigen
 overlays.dasein.addTo(map);
 
-// hier weiter machen um Daseinsvorsorge Daten zu visualisieren
+// hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
 let drawDasein = (geojsonData) => {
-    L.geojsonData(geojsonData, { //geoJSON Aufruf von leaflet Bibliothek
-        onEachFeauture: (feature, layer) => {
+    L.geojsonData(geojsonData, { 
+        onEachFeature: (feature, layer) => {
             layer.bindPopup(`<strong>${feature.properties.NAME}</strong>
             <hr>
-            Station: ${feature.properties.NAME}
-            `)
+            Station: ${feature.properties.NAME}`)
         },
-        pointToLayer: (geoJSONPoint, latlng,) =>
-        {
+        pointToLayer: (geoJSONPoint, latlng) => {
             return L.marker(latlng, {
                 icon: L.icon({
-                    iconUrl: `icons/welfareroom.png`,
+                    iconUrl: `icons/WebGLFramebuffer.png`,
                     iconSize: [38,38]
                 })
             })
@@ -63,15 +61,6 @@ let drawDasein = (geojsonData) => {
     }).addTo(overlays.dasein);
 }
 
-for (let config of OGDTIROL) {
-    fetch(config.data)
-    .then(response => response.json())
-    .then(geojsonData => {
-        if (config.title == "Daseinsvorsorge Innsbruck") {
-            drawDasein(geojsonData);
-        }
-    })
-}
 
 // Leaflet hash einfügen
 new L.Hash(map);
