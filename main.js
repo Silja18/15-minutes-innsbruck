@@ -47,7 +47,7 @@ let drawDasein = (geojsonData) => {
         onEachFeauture: (feature, layer) => {
             layer.bindPopup(`<strong>${feature.properties.NAME}</strong>
             <hr>
-            Station: ${feature.properties.Name}
+            Station: ${feature.properties.NAME}
             `)
         },
         pointToLayer: (geoJSONPoint, latlng,) =>
