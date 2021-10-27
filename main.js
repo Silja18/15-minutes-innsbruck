@@ -43,7 +43,7 @@ overlays.dasein.addTo(map);
 
 // hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
 let drawDasein = (geojsonData) => {
-    L.geojsonData(geojsonData, { 
+    L.geoJsonData(geojsonData, { 
         onEachFeature: (feature, layer) => {
             layer.bindPopup(`<strong>${feature.properties.NAME}</strong>
             <hr>
@@ -52,7 +52,7 @@ let drawDasein = (geojsonData) => {
         pointToLayer: (geoJSONPoint, latlng) => {
             return L.marker(latlng, {
                 icon: L.icon({
-                    iconUrl: `icons/WebGLFramebuffer.png`,
+                    iconUrl: `icons/welfareroom.png.png`,
                     iconSize: [38,38]
                 })
             })
