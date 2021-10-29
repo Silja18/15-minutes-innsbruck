@@ -3,5 +3,5 @@
 const OGDTIROL = [{
     title: "Daseinsvorsorge Tirol",
     source: "https://data-tiris.opendata.arcgis.com/search?tags=US",
-    data: "data/Daseinsvorsorge.geojson"
+    data: "data/Daseinsvorsorge.json"
 }];
