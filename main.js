@@ -17,13 +17,14 @@ let overlays = {
 };
 
 // Karte initialisieren
-let map = L.map(`map`, {
+let map = L.map("map", {
     center: [47.267222, 11.392778],
     zoom: 12,
     layers: [
         baselayers.grau
     ]
-})
+});
+
 
 // Kartenhintergründe und Overlays zur Layer-Control hinzufügen
 let layerControl = L.control.layers({
@@ -41,8 +42,8 @@ let layerControl = L.control.layers({
 // Overlays nach dem Laden anzeigen
 overlays.dasein.addTo(map);
 
-// hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
-let drawDasein = (geojsonData) => {
+ // hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
+ let drawDasein = (geojsonData) => {
     L.geoJsonData(geojsonData, { 
         onEachFeature: (feature, layer) => {
             layer.bindPopup(`<strong>${feature.properties.NAME}</strong>
