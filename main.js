@@ -23,10 +23,26 @@ let map = L.map("map", {
 });
 
 let overlays = {
-    ds:L.featureGroup(),
-    ahs: L.featureGroup(),
-    arzt: L.featureGroup(),
-    bck: L.featureGroup(),
+    ds: L.featureGroup(),
+    dazt101:L.featureGroup(),
+    dbaekr: L.featureGroup(),
+    dbank: L.featureGroup(),
+    dflsch: L.featureGroup(),
+    dghaus: L. featureGroup(),
+    dkindb:L.featureGroup(),
+    dlebmt: L.featureGroup(),
+    dpoliz: L.featureGroup(),
+    dpost1: L.featureGroup(),
+    dpost2:L.featureGroup(),
+    dpsch1: L.featureGroup(),
+    dpsch2: L.featureGroup(),
+    dpsch3: L.featureGroup(),
+    dpsch4: L.featureGroup(),
+    dpsch5:L.featureGroup(),
+    dpsch6: L.featureGroup(),
+    dpsch7: L.featureGroup(),
+    dpsch9:L.featureGroup(),
+    dtanks: L.featureGroup(),
 }
 
 // Kartenhintergründe und Overlays zur Layer-Control hinzufügen
@@ -39,9 +55,26 @@ let layerControl = L.control.layers({
     "basemap.at Orthofoto beschriftet": baselayers.ortho_overlay
 }, {
     "Daseinsvorsorge": overlays.ds,
-    "AHS - Allgemeinbildende Höhere Schule": overlays.ahs,
-    "Arzt Allgemeinmedizin": overlays.arzt,
-    "Bäckerei": overlays.bck,
+    "AHS - Allgemeinbildende Höhere Schule": overlays.dpsch5,
+    "Arzt Allgemeinmedizin": overlays.dazt101,
+    "Bäckerei": overlays.dbaekr,
+    "Bank, Sparkasse": overlays.dbank,
+    "Fleischhauerei": overlays.dflsch,
+    "Gasthaus": overlays.dghaus,
+    "Kinderbetreuung": overlays.dkindb,
+    "Lebensmittelhandel": overlays.dlebmt,
+    "Polizei": overlays.dpoliz,
+    "Posteinrichtung- Postamt": overlays.dpost1,
+    "Posteinrichtung - Post-Partner": overlays.dpost2,
+    "Pflichtschule - Volksschule": overlays.dpsch1,
+    "Pflichtschule - Neue Mittelschule": overlays.dpsch2,
+    "Pflichtschule - Sonderschule": overlays.dpsch3,
+    "Pflichtschule - Polytechnische Schule": overlays.dpsch4,
+    "AHS - Allgemeinbildende Höhere Schule": overlays.dpsch5,
+    "BHS - Berufsbildende Höhere Schule HAK / HTL": overlays.dpsch6,
+    "Fachberufsschule": overlays.dpsch7,
+    "Sonstige Schule": overlays.dpsch9,
+    "Tankstelle mit Shop": overlays.dtanks,
 }).addTo(map);
 
 // Overlays nach dem Laden anzeigen
