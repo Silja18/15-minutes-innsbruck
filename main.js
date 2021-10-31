@@ -11,10 +11,7 @@ let baselayers = {
     ]),
 };
 
-// Overlay für Punkte zur Daseinsvorsorge
-let overlays = {
-    dasein: L.featureGroup()
-};
+
 
 // Karte initialisieren
 let map = L.map("map", {
@@ -44,6 +41,7 @@ overlays.dasein.addTo(map);
 
  // hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
  
+ var marker
 
 
 // Leaflet hash einfügen
