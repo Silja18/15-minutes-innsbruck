@@ -99,7 +99,7 @@ var welfare = L.icon({
          <p>${DASEINSVORSORGE[index].NAME}</p>
          <p>${DASEINSVORSORGE[index].STR}</p>`)
      }
- }).addTo(overlays.ds)
+ }).addTo(overlays.ds);
 
 
 // Leaflet hash einfügen
@@ -143,4 +143,4 @@ L.control.reachability({
     travelModeButton3StyleClass: 'fa fa-male fa-2x',
     travelModeButton4Content: '',
     travelModeButton4StyleClass: 'fa fa-wheelchair fa-2x'
-}).addTo(map);
+}).addTo(map)
