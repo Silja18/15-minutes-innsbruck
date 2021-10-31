@@ -43,24 +43,7 @@ let layerControl = L.control.layers({
 overlays.dasein.addTo(map);
 
  // hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
- let drawDasein = (geojsonData) => {
-    L.geoJsonData(geojsonData, { 
-        onEachFeature: (feature, layer) => {
-            layer.bindPopup(`<strong>${feature.properties.NAME}</strong>
-            <hr>
-            Station: ${feature.properties.NAME}`)
-        },
-        pointToLayer: (geoJSONPoint, latlng) => {
-            return L.marker(latlng, {
-                icon: L.icon({
-                    iconUrl: `icons/welfareroom.png.png`,
-                    iconSize: [38,38]
-                })
-            })
-        },
-        attribution: `<a href="https://mapicons.mapsmarker.com">Maps Icons Collection</a>`
-    }).addTo(overlays.dasein);
-}
+ 
 
 
 // Leaflet hash einfügen
