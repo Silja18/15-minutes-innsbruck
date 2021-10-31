@@ -83,7 +83,7 @@ overlays.ds.addTo(map);
 // icon einfügen
 var welfare = L.icon({
     iconUrl: 'welfareroom.png',
-    iconSize: [30,30],
+    iconSize: [20,20],
     iconAnchor: [10,10],
     popupAnchor: [0,0]
 }); 
