@@ -47,11 +47,24 @@ let layerControl = L.control.layers({
 // Overlays nach dem Laden anzeigen
 overlays.ds.addTo(map);
 
+// icon einfügen
+var welfare = L.icon({
+    iconUrl: 'welfareroom.png',
+    iconSize: [30,30],
+    iconAnchor: [10,10],
+    popupAnchor: [0,0]
+}); 
  // hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
  
  var marker = (function () {
      for (let index = 0; index < DASEINSVORSORGE.length; index++) {
-         let marker = L.marker([DASEINSVORSORGE[index]. lat, DASEINSVORSORGE[index].lon],)
+         let marker = L.marker([DASEINSVORSORGE[index]. lat, DASEINSVORSORGE[index].lon], {
+             icon: welfare
+         })
+         marker.bindPopup(`
+         <h2>${DASEINSVORSORGE[index].OBJEKTBEZEICHNUNG} </h2>)
+         <p>${DASEINSVORSORGE[index].NAME}</p>
+         <p>${DASEINSVORSORGE[index].STR}</p>`)
      }
  })
 
