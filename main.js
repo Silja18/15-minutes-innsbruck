@@ -18,7 +18,7 @@ let map = L.map("map", {
     center: [47.267222, 11.392778],
     zoom: 12,
     layers: [
-        baselayers.grau
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
     ]
 });
 
@@ -98,8 +98,9 @@ var welfare = L.icon({
          <h2>${DASEINSVORSORGE[index].OBJEKTBEZEICHNUNG} </h2>)
          <p>${DASEINSVORSORGE[index].NAME}</p>
          <p>${DASEINSVORSORGE[index].STR}</p>`)
+         .addTo(overlays.ds)
      }
- }).addTo(overlays.ds);
+ });
 
 
 // Leaflet hash einfügen
