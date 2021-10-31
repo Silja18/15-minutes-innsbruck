@@ -1,5 +1,4 @@
-const DASEINSVORSORGE = [{
-    "features": [{
+const DASEINSVORSORGE = [{ 
             "type": "Feature",
             "properties": {
                 "latitude": 47.282417573039503,
@@ -13258,7 +13257,5 @@ const DASEINSVORSORGE = [{
                 "type": "Point",
                 "coordinates": [11.373160836733801, 47.256167227545902]
             }
-        }
-    ]
-},
+        },
 ];
