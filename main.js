@@ -26,7 +26,7 @@ let overlays = {
     ds:L.featureGroup(),
     ahs: L.featureGroup(),
     arzt: L.featureGroup(),
-    bck: L-featureGroup(),
+    bck: L.featureGroup(),
 }
 
 // Kartenhintergründe und Overlays zur Layer-Control hinzufügen
@@ -66,7 +66,7 @@ var welfare = L.icon({
          <p>${DASEINSVORSORGE[index].NAME}</p>
          <p>${DASEINSVORSORGE[index].STR}</p>`)
      }
- })
+ }).addTo(overlays.ds)
 
 
 // Leaflet hash einfügen
