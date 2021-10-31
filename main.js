@@ -22,6 +22,12 @@ let map = L.map("map", {
     ]
 });
 
+let overlays = {
+    ds:L.featureGroup(),
+    ahs: L.featureGroup(),
+    arzt: L.featureGroup(),
+    bck: L-featureGroup(),
+}
 
 // Kartenhintergründe und Overlays zur Layer-Control hinzufügen
 let layerControl = L.control.layers({
@@ -32,16 +38,22 @@ let layerControl = L.control.layers({
     "basemap.at hochauflösend": baselayers.highdpi,
     "basemap.at Orthofoto beschriftet": baselayers.ortho_overlay
 }, {
-    "Daseinsvorsorge": overlays.dasein,
+    "Daseinsvorsorge": overlays.ds,
+    "AHS - Allgemeinbildende Höhere Schule": overlays.ahs,
+    "Arzt Allgemeinmedizin": overlays.arzt,
+    "Bäckerei": overlays.bck,
 }).addTo(map);
 
-
 // Overlays nach dem Laden anzeigen
-overlays.dasein.addTo(map);
+overlays.ds.addTo(map);
 
  // hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
  
- var marker
+ var marker = (function () {
+     for (let index = 0; index < DASEINSVORSORGE.length; index++) {
+         let marker = L.marker([DASEINSVORSORGE[index]. lat, DASEINSVORSORGE[index].lon],)
+     }
+ })
 
 
 // Leaflet hash einfügen
