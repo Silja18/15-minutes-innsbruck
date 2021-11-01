@@ -83,23 +83,22 @@ let layerControl = L.control.layers({
 // Alle Marker auf Map anzeigen lassen:
 L.geoJSON(DASEINSVORSORGE).addTo(map);
 
-fetch("data/Daseinsvorsorge.js")
+("data/Daseinsvorsorge.js")
 .then(function(response) {
     return response.json();
 })
 .then(function(data) {
     L.geoJSON(data, {
-        style: DASEINSVORSORGE_style,
-        onEachFeauture: function(feature, layer) {
+        style: daseinsvorsorge_style,
+        onEachFeature: function(feature, layer) {
             layer.bindPopup(feature.properties.NAME);
         }
     }).addTo(map);
-});
+}); 
 
-let layers = L.layerGroup().addTo(map);
+// let layers = L.layerGroup().addTo(map);
 
 // L.geoJSON(dazt101).addTo(layers);
-
 
 
 // icon einfügen
@@ -111,19 +110,8 @@ var welfare = L.icon({
 }); 
  // hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
  
- /* var marker = (function () {
-     for (let index = 0; index < DASEINSVORSORGE.length; index++) {
-         let marker = L.marker([DASEINSVORSORGE[index]. lat, DASEINSVORSORGE[index].lon], {
-             icon: welfare
-         })
-         marker.bindPopup(`
-         <h2>${DASEINSVORSORGE[index].OBJEKTBEZEICHNUNG} </h2>)
-         <p>${DASEINSVORSORGE[index].NAME}</p>
-         <p>${DASEINSVORSORGE[index].STR}</p>`)
-         .addTo(overlays.ds)
-     }
- });
-*/
+  
+
 
 
 
