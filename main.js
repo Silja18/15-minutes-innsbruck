@@ -83,7 +83,20 @@ let layerControl = L.control.layers({
 // Alle Marker auf Map anzeigen lassen:
 L.geoJSON(DASEINSVORSORGE).addTo(map);
 
-fetch("data/Daseinsvorsorge.js")
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.NAME) {
+        layer.bindPopup(`
+           <h2>${feature.properties.NAME}</h2>
+           <p>${feature.properties.STR}</p>
+           <p>${feature.properties.OBJEKTBEZEICHNUNG}</p> 
+            `);
+    }
+}
+
+L.geoJSON(DASEINSVORSORGE, {
+    onEachFeature: onEachFeature
+}).addTo(map);
+/* fetch("data/Daseinsvorsorge.js")
 .then(function(response) {
     return response.json();
 })
@@ -94,7 +107,7 @@ fetch("data/Daseinsvorsorge.js")
             layer.bindPopup(feature.properties.NAME);
         }
     }).addTo(map);
-}); 
+}); */
 
 // let layers = L.layerGroup().addTo(map);
 
