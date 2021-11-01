@@ -83,7 +83,7 @@ let layerControl = L.control.layers({
 // Alle Marker auf Map anzeigen lassen:
 L.geoJSON(DASEINSVORSORGE).addTo(map);
 
-("data/Daseinsvorsorge.js")
+fetch("data/Daseinsvorsorge.js")
 .then(function(response) {
     return response.json();
 })
