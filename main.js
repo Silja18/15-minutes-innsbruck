@@ -29,21 +29,21 @@ let map = L.map("map", {
     dbank: L.featureGroup(),
     dflsch: L.featureGroup(),
     dghaus: L. featureGroup(),
-    dkindb:L.featureGroup(),
+    dkindb: L.markerClusterGroup(),
     dlebmt: L.featureGroup(),
     dpoliz: L.featureGroup(),
     dpost1: L.featureGroup(),
-    dpost2:L.featureGroup(),
-    dpsch1: L.featureGroup(),
-    dpsch2: L.featureGroup(),
-    dpsch3: L.featureGroup(),
-    dpsch4: L.featureGroup(),
-    dpsch5:L.featureGroup(),
-    dpsch6: L.featureGroup(),
-    dpsch7: L.featureGroup(),
-    dpsch9:L.featureGroup(),
+    dpost2: L.featureGroup(),
+    dpsch1: L.markerClusterGroup(),
+    dpsch2: L.markerClusterGroup(),
+    dpsch3: L.markerClusterGroup(),
+    dpsch4: L.markerClusterGroup(),
+    dpsch5: L.markerClusterGroup(),
+    dpsch6: L.markerClusterGroup(),
+    dpsch7: L.markerClusterGroup(),
+    dpsch9: L.markerClusterGroup(),
     dtanks: L.featureGroup(),
-} */
+}; */
 
 // Kartenhintergründe und Overlays zur Layer-Control hinzufügen
 let layerControl = L.control.layers({
@@ -75,10 +75,10 @@ let layerControl = L.control.layers({
     "Fachberufsschule": overlays.dpsch7,
     "Sonstige Schule": overlays.dpsch9,
     "Tankstelle mit Shop": overlays.dtanks,
-} */).addTo(map);
-
+}*/)
+.addTo(map);
 // Overlays nach dem Laden anzeigen
-// overlays.ds.addTo(map);
+overlays.ds.addTo(map);
 
 // Alle Marker auf Map anzeigen lassen:
 L.geoJSON(DASEINSVORSORGE).addTo(map);
