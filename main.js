@@ -22,7 +22,7 @@ let map = L.map("map", {
     ]
 });
 
-let overlays = {
+/* let overlays = {
     ds: L.featureGroup(),
     dazt101:L.featureGroup(),
     dbaekr: L.featureGroup(),
@@ -43,7 +43,7 @@ let overlays = {
     dpsch7: L.featureGroup(),
     dpsch9:L.featureGroup(),
     dtanks: L.featureGroup(),
-}
+} */
 
 // Kartenhintergründe und Overlays zur Layer-Control hinzufügen
 let layerControl = L.control.layers({
@@ -53,7 +53,7 @@ let layerControl = L.control.layers({
     "basemap.at Oberfläche": baselayers.surface,
     "basemap.at hochauflösend": baselayers.highdpi,
     "basemap.at Orthofoto beschriftet": baselayers.ortho_overlay
-}, {
+}, /* {
     "Daseinsvorsorge": overlays.ds,
     "AHS - Allgemeinbildende Höhere Schule": overlays.dpsch5,
     "Arzt Allgemeinmedizin": overlays.dazt101,
@@ -75,17 +75,30 @@ let layerControl = L.control.layers({
     "Fachberufsschule": overlays.dpsch7,
     "Sonstige Schule": overlays.dpsch9,
     "Tankstelle mit Shop": overlays.dtanks,
-}).addTo(map);
+} */).addTo(map);
 
 // Overlays nach dem Laden anzeigen
-overlays.ds.addTo(map);
+// overlays.ds.addTo(map);
 
 // Alle Marker auf Map anzeigen lassen:
 L.geoJSON(DASEINSVORSORGE).addTo(map);
 
+fetch("data/Daseinsvorsorge.js")
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+    L.geoJSON(data, {
+        style: DASEINSVORSORGE_style,
+        onEachFeauture: function(feature, layer) {
+            layer.bindPopup(feature.properties.NAME);
+        }
+    }).addTo(map);
+});
+
 let layers = L.layerGroup().addTo(map);
 
-
+// L.geoJSON(dazt101).addTo(layers);
 
 
 
