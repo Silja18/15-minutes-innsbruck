@@ -79,6 +79,9 @@ let layerControl = L.control.layers({
 
 // Overlays nach dem Laden anzeigen
 overlays.ds.addTo(map);
+L.geoJSON(DASEINSVORSORGE).addTo(map);
+
+
 
 // icon einfügen
 var welfare = L.icon({
@@ -89,7 +92,7 @@ var welfare = L.icon({
 }); 
  // hier weiter machen um Daseinsvorsorge Daten zu visualisieren 
  
- var marker = (function () {
+ /* var marker = (function () {
      for (let index = 0; index < DASEINSVORSORGE.length; index++) {
          let marker = L.marker([DASEINSVORSORGE[index]. lat, DASEINSVORSORGE[index].lon], {
              icon: welfare
@@ -101,6 +104,8 @@ var welfare = L.icon({
          .addTo(overlays.ds)
      }
  });
+*/
+
 
 
 // Leaflet hash einfügen
