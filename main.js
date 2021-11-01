@@ -79,7 +79,13 @@ let layerControl = L.control.layers({
 
 // Overlays nach dem Laden anzeigen
 overlays.ds.addTo(map);
+
+// Alle Marker auf Map anzeigen lassen:
 L.geoJSON(DASEINSVORSORGE).addTo(map);
+
+let layers = L.layerGroup().addTo(map);
+
+
 
 
 
