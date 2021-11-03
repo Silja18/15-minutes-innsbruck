@@ -78,7 +78,7 @@ let layerControl = L.control.layers({
 }*/)
 .addTo(map);
 // Overlays nach dem Laden anzeigen
-overlays.ds.addTo(map);
+// overlays.ds.addTo(map);
 
 // Alle Marker auf Map anzeigen lassen:
 L.geoJSON(DASEINSVORSORGE).addTo(map);
@@ -96,6 +96,7 @@ function onEachFeature(feature, layer) {
 L.geoJSON(DASEINSVORSORGE, {
     onEachFeature: onEachFeature
 }).addTo(map);
+
 /* fetch("data/Daseinsvorsorge.js")
 .then(function(response) {
     return response.json();

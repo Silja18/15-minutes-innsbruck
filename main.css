@@ -38,10 +38,7 @@ header address {
     font-style: italic;
 }
 
-main {
-    max-width: 70%;
-    margin: auto;
-}
+
 
 main p {
     text-align: justify;
@@ -58,9 +55,10 @@ main figure img {
 }
 
 #map {
-    height: 360px;
-    width: 100%;
+    width: 90%;
+    height: 90vh;
     border: 1px solid gray;
+    margin: auto;
 }
 
 main ul {
