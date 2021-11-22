@@ -97,6 +97,8 @@ L.geoJSON(DASEINSVORSORGE, {
     onEachFeature: onEachFeature
 }).addTo(map);
 
+L.geoJSON(STATISTIK_11).addTo(map);
+
 /* fetch("data/Daseinsvorsorge.js")
 .then(function(response) {
     return response.json();
