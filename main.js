@@ -99,6 +99,10 @@ L.geoJSON(DASEINSVORSORGE, {
 
 L.geoJSON(STATISTIK_11).addTo(map);
 
+L.geoJSON(STATISTIK_11, {
+    onEachFeature: onEachFeature
+}).addTo(map);
+
 /* fetch("data/Daseinsvorsorge.js")
 .then(function(response) {
     return response.json();
