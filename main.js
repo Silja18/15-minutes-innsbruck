@@ -81,12 +81,12 @@ let layerControl = L.control.layers({
 // overlays.ds.addTo(map);
 
 // Alle Marker auf Map anzeigen lassen:
-/* L.geoJSON(DASEINSVORSORGE).addTo(map);
+L.geoJSON(DASEINSVORSORGE).addTo(map);
 
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.NAME) {
         layer.bindPopup(`
-           <h2>${feature.properties.NAME}</h2>
+           <h2>Stadtteil:${feature.properties.NAME}</h2>
            <p>${feature.properties.STR}</p>
            <p>${feature.properties.OBJEKTBEZEICHNUNG}</p> 
             `);
@@ -95,9 +95,16 @@ function onEachFeature(feature, layer) {
 
 L.geoJSON(DASEINSVORSORGE, {
     onEachFeature: onEachFeature
-}).addTo(map); */
+}).addTo(map); 
 
 L.geoJSON(STATISTIK_11).addTo(map);
+
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.STADTTEIL) {
+        layer.bindPopup(`
+        <h2>${feature.properties.STADTTEIL}`);
+    }
+}
 
 L.geoJSON(STATISTIK_11, {
     onEachFeature: onEachFeature
