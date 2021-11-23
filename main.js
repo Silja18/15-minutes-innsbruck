@@ -80,13 +80,15 @@ let layerControl = L.control.layers({
 // Overlays nach dem Laden anzeigen
 // overlays.ds.addTo(map);
 
+
+
 // Alle Marker auf Map anzeigen lassen:
 L.geoJSON(DASEINSVORSORGE).addTo(map);
 
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.NAME) {
         layer.bindPopup(`
-           <h2>Stadtteil:${feature.properties.NAME}</h2>
+           <h2>${feature.properties.NAME}</h2>
            <p>${feature.properties.STR}</p>
            <p>${feature.properties.OBJEKTBEZEICHNUNG}</p> 
             `);
@@ -102,13 +104,14 @@ L.geoJSON(STATISTIK_11).addTo(map);
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.STADTTEIL) {
         layer.bindPopup(`
-        <h2>${feature.properties.STADTTEIL}`);
+        <h2>Stadtteil: ${feature.properties.STADTTEIL}`);
     }
 }
 
 L.geoJSON(STATISTIK_11, {
     onEachFeature: onEachFeature
 }).addTo(map);
+
 
 /* fetch("data/Daseinsvorsorge.js")
 .then(function(response) {
