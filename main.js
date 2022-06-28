@@ -104,10 +104,11 @@ L.geoJSON(STATISTIK_11).addTo(map);
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.STADTTEIL) {
         layer.bindPopup(`
-        <h2>Stadtteil: ${feature.properties.STADTTEIL},
-         
-        <h3>Score Grün: ${feature.properties.Score_Grün},
-        <h3>Kommentar: ${feature.properties.comment}`);
+        <h2>Stadtteil: ${feature.properties.STADTTEIL}
+        <h3>Score Grün: ${feature.properties.Score_Grün}
+        <h3>Ich lebe geren in meinem Stadtteil, weil ...: ${feature.properties.comment}
+        <h3>Probleme und Verbesserungsvorschläge: ${feature.properties.recs}
+        <h3>Wünsche: ${feature.properties.wish}`);
     }
 }
 
