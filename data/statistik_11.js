@@ -12,6 +12,8 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 1,
                 "STADTTEIL": "Amras",
+                "Score_Grün": "5",
+                "comment": "Nice!",
                 "Area_GK": 1520597,
                 "Area_org_GK": 3106226,
                 "STNEU": 17,
@@ -334,6 +336,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 2,
                 "STADTTEIL": "Arzl",
+                "Score_Grün": "5",
                 "Area_GK": 1970996,
                 "Area_org_GK": 20283136,
                 "STNEU": 15,
@@ -1337,6 +1340,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 3,
                 "STADTTEIL": "Dreiheiligen - Schlachthof",
+                "Score_Grün": "5",
                 "Area_GK": 418104,
                 "Area_org_GK": 418104,
                 "STNEU": 3,
@@ -1819,6 +1823,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 6,
                 "STADTTEIL": "Hötting",
+                "Score_Grün": "5",
                 "Area_GK": 2089372,
                 "Area_org_GK": 4257410,
                 "STNEU": 9,
@@ -2428,6 +2433,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 7,
                 "STADTTEIL": "Hötting West",
+                "Score_Grün": "5",
                 "Area_GK": 2980790,
                 "Area_org_GK": 13712830,
                 "STNEU": 11,
@@ -2715,6 +2721,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 8,
                 "STADTTEIL": "Höttinger Au",
+                "Score_Grün": "5",
                 "Area_GK": 2602926,
                 "Area_org_GK": 4231013,
                 "STNEU": 10,
@@ -3725,6 +3732,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 11,
                 "STADTTEIL": "Innenstadt",
+                "Score_Grün": "4",
                 "Area_GK": 1334093,
                 "Area_org_GK": 1334093,
                 "STNEU": 1,
@@ -3940,6 +3948,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 12,
                 "STADTTEIL": "Mariahilf - St. Nikolaus",
+                "Score_Grün": "5",
                 "Area_GK": 368416,
                 "Area_org_GK": 368416,
                 "STNEU": 2,
@@ -5234,6 +5243,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 15,
                 "STADTTEIL": "Pradl",
+                "Score_Grün": "5",
                 "Area_GK": 2263385,
                 "Area_org_GK": 2783699,
                 "STNEU": 7,
@@ -5564,6 +5574,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 16,
                 "STADTTEIL": "Reichenau",
+                "Score_Grün": "5",
                 "Area_GK": 1015434,
                 "Area_org_GK": 1015434,
                 "STNEU": 8,
@@ -5737,6 +5748,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 17,
                 "STADTTEIL": "Saggen",
+                "Score_Grün": "5",
                 "Area_GK": 950652,
                 "Area_org_GK": 950652,
                 "STNEU": 4,
@@ -6423,6 +6435,7 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 20,
                 "STADTTEIL": "Wilten",
+                "Score_Grün": "4",
                 "Area_GK": 2344190,
                 "Area_org_GK": 3984096,
                 "STNEU": 5,
