@@ -106,9 +106,9 @@ function onEachFeature(feature, layer) {
         layer.bindPopup(`
         <h2>Stadtteil: ${feature.properties.STADTTEIL}
         <h3>Score Grün: ${feature.properties.Score_Grün}
-        <h3>Ich lebe geren in meinem Stadtteil, weil ...: ${feature.properties.comment}
-        <h3>Probleme und Verbesserungsvorschläge: ${feature.properties.recs}
-        <h3>Wünsche: ${feature.properties.wish}`);
+        <h3>Ich lebe geren in meinem Stadtteil, weil ...:</h3> ${feature.properties.comment}
+        <h3>Probleme und Verbesserungsvorschläge:</h3> ${feature.properties.recs}
+        <h3>Wünsche:</h3> ${feature.properties.wish}`);
     }
 }
 
