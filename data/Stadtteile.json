@@ -1,4 +1,4 @@
-const STATISTIK_11 = [{
+{
     "type": "FeatureCollection",
     "name": "statistik_11",
     "crs": {
@@ -12,8 +12,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 1,
                 "STADTTEIL": "Amras",
-                "Score_Grün": "5",
-                "comment": "Nice!",
                 "Area_GK": 1520597,
                 "Area_org_GK": 3106226,
                 "STNEU": 17,
@@ -336,7 +334,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 2,
                 "STADTTEIL": "Arzl",
-                "Score_Grün": "5",
                 "Area_GK": 1970996,
                 "Area_org_GK": 20283136,
                 "STNEU": 15,
@@ -1340,7 +1337,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 3,
                 "STADTTEIL": "Dreiheiligen - Schlachthof",
-                "Score_Grün": "5",
                 "Area_GK": 418104,
                 "Area_org_GK": 418104,
                 "STNEU": 3,
@@ -1823,10 +1819,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 6,
                 "STADTTEIL": "Hötting",
-                "Score_Grün": "5",
-                "comment": "<ul><li>...man schnell im grünen ist. Teilweise wäre aber eine bessere anbindung an den nahverkehr schön. (91, Pos. 1)</li> <li>...er sehr zentral ist, aber trotzdem ein bisschen weg vom Trubel ist. (99, Pos. 1)</li> <li>...er die perfekte Distanz zu Innenstadt und Natur hat. (102, Pos. 1)</li></ul>",
-                "recs": "<ul><li>Bessere Busanbindung, bessere Busanbindung in die Skigebiete;) Bankautomaten in der Nähe  (91, Pos. 2)</li> <li>Nicht nur in Hötting: Ampelschaltungen bevorzugen immer Autofahrer  die neue Ampelschaltung an der Innbrücke hat die Situation für Fußgänger noch verschlechtert, es scheint als möchte man die Fußgänger dazu bewegen auf das Auto umzusteigen (101, Pos. 2)</li> <li>Unterstützend zur Mobilität zu Fuß/Fahrrad ist ein attraktives (preiswertes) Öffi Netzwerk wünschenswert. Das sehe ich zur Zeit in Innsbruck (für Gelegenheitsuser) nicht. (196, Pos. 2)</li></ul>",
-                "wish": "<ul><li>Bessere Anbindung zu Radwegen (101, Pos. 3)</li> <li>Mehr Platz für Radfahrer (101, Pos. 4)</li> <li>Mehr Restaurants- und Gasthäuser (102, Pos. 2)</li></ul>",
                 "Area_GK": 2089372,
                 "Area_org_GK": 4257410,
                 "STNEU": 9,
@@ -2436,7 +2428,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 7,
                 "STADTTEIL": "Hötting West",
-                "Score_Grün": "5",
                 "Area_GK": 2980790,
                 "Area_org_GK": 13712830,
                 "STNEU": 11,
@@ -2724,7 +2715,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 8,
                 "STADTTEIL": "Höttinger Au",
-                "Score_Grün": "5",
                 "Area_GK": 2602926,
                 "Area_org_GK": 4231013,
                 "STNEU": 10,
@@ -3735,7 +3725,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 11,
                 "STADTTEIL": "Innenstadt",
-                "Score_Grün": "4",
                 "Area_GK": 1334093,
                 "Area_org_GK": 1334093,
                 "STNEU": 1,
@@ -3951,7 +3940,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 12,
                 "STADTTEIL": "Mariahilf - St. Nikolaus",
-                "Score_Grün": "5",
                 "Area_GK": 368416,
                 "Area_org_GK": 368416,
                 "STNEU": 2,
@@ -5246,7 +5234,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 15,
                 "STADTTEIL": "Pradl",
-                "Score_Grün": "5",
                 "Area_GK": 2263385,
                 "Area_org_GK": 2783699,
                 "STNEU": 7,
@@ -5577,7 +5564,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 16,
                 "STADTTEIL": "Reichenau",
-                "Score_Grün": "5",
                 "Area_GK": 1015434,
                 "Area_org_GK": 1015434,
                 "STNEU": 8,
@@ -5751,7 +5737,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 17,
                 "STADTTEIL": "Saggen",
-                "Score_Grün": "5",
                 "Area_GK": 950652,
                 "Area_org_GK": 950652,
                 "STNEU": 4,
@@ -6438,7 +6423,6 @@ const STATISTIK_11 = [{
             "properties": {
                 "OBJECTID": 20,
                 "STADTTEIL": "Wilten",
-                "Score_Grün": "4",
                 "Area_GK": 2344190,
                 "Area_org_GK": 3984096,
                 "STNEU": 5,
@@ -6730,4 +6714,4 @@ const STATISTIK_11 = [{
             }
         }
     ]
-}]
+}
