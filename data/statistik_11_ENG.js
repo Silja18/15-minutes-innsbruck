@@ -5930,9 +5930,9 @@ const STATISTIK_11_ENG = [{
             "properties": {
                 "OBJECTID": 18,
                 "STADTTEIL": "Sieglanger - Mentlberg",
-                "comment": "",
-                "recs": "",
-                "wish": "",
+                "comment": "The nature is not far and the view over Innsbruck and to the Nordkette is super nice. (390, pos. 1) ",
+                "recs": "no grocery store nearby (390, pos. 2)",
+                "wish": "grocery store (417, pos. 3)",
                 "Area_GK": 1205429,
                 "Area_org_GK": 2788600,
                 "STNEU": 6,

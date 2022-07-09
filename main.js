@@ -107,7 +107,7 @@ function onEachFeature(feature, layer) {
         <h2>District: ${feature.properties.STADTTEIL}
         <h3>I like living in my diytrict because ...:</h3> ${feature.properties.comment}
         <h3>Issues and Suggestions:</h3> ${feature.properties.recs} 
-        <h3>Wish:</h3> ${feature.properties.wish}`);
+        <h3>Wish:</h3> ${feature.properties.wish}`,{maxWidth: 200, keepInView: true});
     }
 }
 
