@@ -104,7 +104,7 @@ L.geoJSON(STATISTIK_11_ENG).addTo(map);
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.STADTTEIL) {
         layer.bindPopup(`
-        <h2>Stadtteil: ${feature.properties.STADTTEIL}
+        <h2>District: ${feature.properties.STADTTEIL}
         <h3>I like living in my diytrict because ...:</h3> ${feature.properties.comment}
         <h3>Issues and Suggestions:</h3> ${feature.properties.recs} 
         <h3>Wish:</h3> ${feature.properties.wish}`);
