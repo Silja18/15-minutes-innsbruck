@@ -38,14 +38,11 @@ header address {
     font-style: italic;
 }
 
-main {
-    max-width: 70%;
-    margin: auto;
-}
-
 main p {
     text-align: justify;
     font-family: 'Roboto Condensed', sans-serif;
+    max-width: 70%;
+    margin: auto;
 }
 
 main figure {
