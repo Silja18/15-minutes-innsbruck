@@ -38,7 +38,10 @@ header address {
     font-style: italic;
 }
 
-
+main {
+    max-width: 70%;
+    margin: auto;
+}
 
 main p {
     text-align: justify;
