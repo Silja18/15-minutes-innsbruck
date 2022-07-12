@@ -7,6 +7,10 @@ let baselayers = {
     ]),
 };
 
+let overlays = {
+    wish: L.featureGroup()
+};
+
 // Karte initialisieren
 let map = L.map("map", {
     center: [47.267222, 11.392778],
@@ -20,34 +24,46 @@ let map = L.map("map", {
 let layerControl = L.control.layers({
     "basemap.at hochauflösend": baselayers.highdpi,
     "basemap.at Orthofoto beschriftet": baselayers.ortho_overlay
-},)
+}, {
+    "Wünsche und Vorschläge": overlays.wish,
+}
+)
 .addTo(map);
 
-let drawWish = (geosonData) => {
-    L.geoJson(geosonData), {
+overlays.wish.addTo(map);
+
+/* let drawWish = (wish) => {
+    L.geoJson(wish, {
         onEachFeature: (feature, layer) => {
             layer.bindPopup(`<strong>${feature.properties.stadtteil}</strong>
             <hr>
-            Wunsch: ${feature.properties.wisch}`)
+            Wunsch: ${feature.properties.wish}`)
         },
-        
-    }
+        pointToLayer: (geoJsonPoint, latlng) => {
+            return L.marker(latlng, {
+                icon: L.icon({
+                    iconUrl: 'images/icons/welfareroom.png',
+                    iconSize: [35, 35]
+                })
+            })
+        }
+    }).addTo(overlays.wish);
 }
-
-/* L.geoJSON(WISH).addTo(map);
+*/
+L.geoJSON(WISH).addTo(map);
 // 
 function onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties.stadtteil) {
+    if (feature.properties && feature.properties.STADTTEIL) {
     layer.bindPopup(`
-    <h2>Stadtteil: ${feature.properties.stadtteil}
-    <h3>Wunsch: ${feature.properties.wish} 
+    <h2>Stadtteil: ${feature.properties.STADTTEIL}
+    <h3>Wunsch: ${feature.properties.WISH} 
     `)}
 }
 
 L.geoJSON(WISH, {
     onEachFeature: onEachFeature
 }).addTo(map);
-*/
+
 
 /* var marker = (function () {
     for (let index = 0; index < WISH.length; index++) {
