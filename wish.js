@@ -1,38 +1,75 @@
-const WISH = [{
+const WISH = [{ 
+"type": "FeatureCollection",
+"features": [
+    {
+    "type": "Feature",
+      "properties": {
         "stadtteil": "Hötting",
         "wish": "2-3 zusätzliche Lokale (Cafe/Bar/Restaurant) würden Hötting sehr gut tun, da mittlerweile doch viele Menschen dort wohnen und für sämtliche Freizeitaktivitäten (ausgenommen Bergsport) und Erledigungen in die Stadt müssen. (431)",
-        "lat": 47.268228,
-        "lon": 11.372497,
     },
-    {
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            47.268228,
+            11.372497
+        ]},
+        "type": "Feature",
+        "properties":  {
         "stadtteil": "Höttinger Au",
         "wish": "Eine größere (in dem Fall breitere) Grünfläche - der Abschnitt am Inn ist recht schmal. (399)",
-        "lat": 47.253513,
-        "lon": 11.366770,
     },
-    {
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            47.253513,
+            11.366770
+        ] },
+    "type": "Feature",
+            "properties": {
         "stadtteil": "Hötinger Au",
         "wish": "Mehr grün (zb. Bushalte Höttinger Au / West)",
-        "lat": 47.264895323811125,
-        "lon": 11.373003706058991,
     },
-    {
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            47.264895323811125,
+            11.373003706058991
+        ] },
+    "type": "Feature",
+            "properties": {
         "stadtteil": "Höttinger Au",
         "wish": "Mitterweg müsste Charakter einer Wohnstraße erhalten, weniger Asphalt",
-        "lat": 47.25876830413813,
-        "lon": 11.373784831266851,
     },
-    {
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            47.25876830413813,
+            11.373784831266851
+        ] },
+    "type": "Feature",
+    "properties":  {
         "stadtteil": "Höttinger Au",
-        "wish": "Gerade das Angebot von 'Wohlfühlorten', wie Cafés, schöne Ausblicke, nette Häuser, gibt es hier eigentlich nicht (Höttinger Au, Höhe Unterbergerstraße)",
-        "lat": 47.26310106217448,
-        "lon": 11.377368131738642,
+        "wish": "Gerade das Angebot von 'Wohlfühlorten', wie Cafés, schöne Ausblicke, nette Häuser, gibt es hier eigentlich nicht (Höttinger Au, Höhe Unterbergerstraße)"
     },
-
-    {
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            47.26310106217448,
+            11.377368131738642
+        ] },
+    "type": "Feature",
+            "properties": {
         "stadtteil": "",
         "wish": "",
         "lat": "",
         "lon": "",
     },
-];
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+          ,
+         
+        ] },
+}
+]
+}];
