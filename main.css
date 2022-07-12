@@ -77,6 +77,8 @@ footer .back {
 }
 
 footer {
+    max-width: 90%;
+    margin: auto;
     padding: 1em 0 3em 0;
 }
 
