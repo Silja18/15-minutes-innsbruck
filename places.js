@@ -22,20 +22,37 @@ let layerControl = L.control.layers({
     "basemap.at Orthofoto beschriftet": baselayers.ortho_overlay
 },).addTo(map);
 
-var marker = (function () {
+L.geoJSON(WISH).addTo(map);
+
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.stadtteil) {
+    layer.bindPopup(`
+    <h2>Stadtteil: ${feature.properties.stadtteil}
+    <h3>Wunsch: ${feature.properties.wish} 
+    `)}
+}
+
+/* var marker = (function () {
     for (let index = 0; index < WISH.length; index++) {
         let marker = L.marker([WISH[index].lat, WISH[index].lon],
             )
     marker.bindPopup(`
     <h2>${WISH[index].stadtteil}</h2>
     <p>${WISH[index].wish}</p>
-    `)        
+    `)
+    .addTo(map)        
     }
 })
+*/
 
 
-
-
+/* let marker = L.marker([WISH.lat, WISH.long])
+marker.bindPopup(`
+    <h2>${WISH[index].stadtteil}</h2>
+    <p>${WISH[index].wish}</p>
+    `)
+    .addTo(map) 
+*/
 
 
 // Leaflet hash einfügen
