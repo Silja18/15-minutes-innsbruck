@@ -20,10 +20,22 @@ let map = L.map("map", {
 let layerControl = L.control.layers({
     "basemap.at hochauflösend": baselayers.highdpi,
     "basemap.at Orthofoto beschriftet": baselayers.ortho_overlay
-},).addTo(map);
+},)
+.addTo(map);
 
-L.geoJSON(WISH).addTo(map);
+let drawWish = (geosonData) => {
+    L.geoJson(geosonData), {
+        onEachFeature: (feature, layer) => {
+            layer.bindPopup(`<strong>${feature.properties.stadtteil}</strong>
+            <hr>
+            Wunsch: ${feature.properties.wisch}`)
+        },
+        
+    }
+}
 
+/* L.geoJSON(WISH).addTo(map);
+// 
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.stadtteil) {
     layer.bindPopup(`
@@ -31,6 +43,11 @@ function onEachFeature(feature, layer) {
     <h3>Wunsch: ${feature.properties.wish} 
     `)}
 }
+
+L.geoJSON(WISH, {
+    onEachFeature: onEachFeature
+}).addTo(map);
+*/
 
 /* var marker = (function () {
     for (let index = 0; index < WISH.length; index++) {
