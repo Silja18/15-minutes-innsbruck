@@ -50,27 +50,7 @@ const WISH = [{
             "stadtteil": "Höttinger Au",
             "wish": "Gerade das Angebot von 'Wohlfühlorten', wie Cafés, schöne Ausblicke, nette Häuser, gibt es hier eigentlich nicht (Höttinger Au, Höhe Unterbergerstraße)"
          }
-      }, {
-         "type": "Feature",
-         "geometry": {
-            "type": "Point",
-            "coordinates": []
-         },
-         "properties": {
-            "stadtteil": "",
-            "wish": ""
-         }
-      }, {
-         "type": "Feature",
-         "geometry": {
-            "type": "Point",
-            "coordinates": []
-         },
-         "properties": {
-            "stadtteil": "",
-            "wish": ""
-         }
-      }
+      }, 
 
    ]
 }]
