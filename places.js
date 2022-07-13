@@ -25,9 +25,15 @@ let layerControl = L.control.layers({
 )
 .addTo(map);
 
-L.geoJSON(WISH).addTo(map);
+L.geoJSON(WISH, {
+pointToLayer: function (feature, latlng) {
+    return L.marker(latlng);
+}
+}).addTo(map);
 
-function onEachFeature(feature, layer) {
+
+
+/* function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.stadtteil) {
         layer.bindPopup(`
         <h2>Stadtteil: ${feature.properties.stadtteil}</h2>
@@ -35,10 +41,7 @@ function onEachFeature(feature, layer) {
         `);
     }
 }
-
-L.geoJSON(WISH, {
-    onEachFeature: onEachFeature
-}).addTo(map);
+*/
 
 
 // Leaflet hash einfügen

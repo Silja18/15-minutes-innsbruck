@@ -38,3 +38,26 @@ marker.bindPopup(`
     `)
     .addTo(map) 
 */
+
+/* {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates": []
+    },
+    "properties": {
+       "stadtteil": "",
+       "wish": ""
+    }
+ }, {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates": []
+    },
+    "properties": {
+       "stadtteil": "",
+       "wish": ""
+    }
+ }
+ */
