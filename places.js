@@ -29,9 +29,18 @@ let layerControl = L.control.layers({
 
 L.geoJSON(ORTE).addTo(map);
 
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.DOKUMENTNAME) {
+        layer.bindPopup(`
+        <h2>Stadtteil:</h2> ${feature.properties.DOKUMENTGRUPPE}
+        <h3>Wunsh:</h3> ${feature.properties.SEGMENT}
+        `);
+    } 
+}
 
-
-
+L.geoJSON(ORTE, {
+    onEachFeature: onEachFeature
+}).addTo(map);
 
 
 /* L.geoJSON(WISH).addTo(map);

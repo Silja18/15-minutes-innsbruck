@@ -1,6 +1,6 @@
 const ORTE = [{
     "type": "FeatureCollection",
-    "name": "Vorschläge für konkrete Orte_nur Long und Lat",
+    "name": "Orte",
     "crs": {
         "type": "name",
         "properties": {
