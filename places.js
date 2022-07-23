@@ -27,7 +27,9 @@ let layerControl = L.control.layers({
 )
 .addTo(map);
 
-L
+L.geoJSON(ORTE).addTo(map);
+
+
 
 
 
