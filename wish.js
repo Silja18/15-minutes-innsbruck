@@ -1,5 +1,6 @@
 const WISH = [{
    "type": "FeatureCollection",
+   "name": "wish",
    "features": [{
          "type": "Feature",
          "geometry": {
@@ -38,7 +39,7 @@ const WISH = [{
          },
          "properties": {
             "stadtteil": "Höttinger Au",
-            "wish": "itterweg müsste Charakter einer Wohnstraße erhalten, weniger Asphalt"
+            "wish": "Mitterweg müsste Charakter einer Wohnstraße erhalten, weniger Asphalt"
          }
       }, {
          "type": "Feature",
