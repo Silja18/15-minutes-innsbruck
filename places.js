@@ -94,7 +94,19 @@ L.geoJSON(FUSS, {
 
 // Tempo Layer
 
+L.geoJSON(TEMPO).addTo(overlays.Tempo);
 
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.Dokumentname) {
+        layer.bindPopup(`<h2>${feature.properties.Dokumentgruppe}</h2>
+        <h3>Kategorie:</h3>${feature.properties.Kategorie}
+        <h3>Wunsch:</h3> ${feature.properties.Segment}`);
+    }
+}
+
+L.geoJSON(TEMPO, {
+    onEachFeature: onEachFeature
+}).addTo(overlays.Tempo);
 
 /*let drawFussRad = (geojsonData) => {
     L.geoJson(geojsonData, {
