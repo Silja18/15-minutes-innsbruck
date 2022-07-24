@@ -7,6 +7,12 @@ let baselayers = {
     ]),
 };
 
+// Overlays für Kategorien zum Ein- und Ausschalten
+let overlays = {
+    FussRad: L.featureGroup(),
+    Rad: L.featureGroup(),
+    Fuss: L.featureGroup()
+};
 
 // Karte initialisieren
 let map = L.map("map", {
@@ -23,11 +29,21 @@ let map = L.map("map", {
 let layerControl = L.control.layers({
     "basemap.at hochauflösend": baselayers.highdpi,
     "basemap.at Orthofoto beschriftet": baselayers.ortho_overlay
-}, 
+}, {
+    "Vorschläge Fuß und Rad": overlays.FussRad,
+    "Vorschläge Radfahren": overlays.Rad,
+    "Vorschläge Gehen": overlays.Fuss
+}
 )
 .addTo(map);
 
-L.geoJSON(ORTE).addTo(map);
+// alle Overlays nach dem Laden zeigen
+
+overlays.FussRad.addTo(map);
+overlays.Rad.addTo(map);
+overlays.Fuss.addTo(map);
+
+/* L.geoJSON(ORTE).addTo(map);
 
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.Dokumentname) {
@@ -40,7 +56,7 @@ function onEachFeature(feature, layer) {
 
 L.geoJSON(ORTE, {
     onEachFeature: onEachFeature
-}).addTo(map);
+}).addTo(map); */
 
 
 /* L.geoJSON(WISH).addTo(map);
