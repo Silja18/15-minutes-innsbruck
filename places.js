@@ -43,6 +43,65 @@ overlays.FussRad.addTo(map);
 overlays.Rad.addTo(map);
 overlays.Fuss.addTo(map);
 
+// Fuß und Raffahren Layer
+L.geoJSON(FUSSRAD).addTo(overlays.FussRad);
+
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.Dokumentname) {
+        layer.bindPopup(`<h2>${feature.properties.Dokumentgruppe}</h2>
+        <h3>Kategorie:</h3>${feature.properties.Kategorie}
+        <h3>Wunsch:</h3> ${feature.properties.Segment}`);
+    }
+}
+
+L.geoJSON(FUSSRAD, {
+    onEachFeature: onEachFeature
+}).addTo(overlays.FussRad);
+
+// Radfahren Layer
+L.geoJSON(RAD).addTo(overlays.Rad);
+
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.Dokumentname) {
+        layer.bindPopup(`<h2>${feature.properties.Dokumentgruppe}</h2>
+        <h3>Kategorie:</h3>${feature.properties.Kategorie}
+        <h3>Wunsch:</h3> ${feature.properties.Segment}`);
+    }
+}
+
+L.geoJSON(RAD, {
+    onEachFeature: onEachFeature
+}).addTo(overlays.Rad);
+
+// Fuß Layer
+
+L.geoJSON(FUSS).addTo(overlays.Fuss);
+
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.Dokumentname) {
+        layer.bindPopup(`<h2>${feature.properties.Dokumentgruppe}</h2>
+        <h3>Kategorie:</h3>${feature.properties.Kategorie}
+        <h3>Wunsch:</h3> ${feature.properties.Segment}`);
+    }
+}
+
+L.geoJSON(FUSS, {
+    onEachFeature: onEachFeature
+}).addTo(overlays.Fuss);
+
+
+/*let drawFussRad = (geojsonData) => {
+    L.geoJson(geojsonData, {
+        onEachFeature: (feature, layer) => {
+            layer.bindPopup(`<strong>${feature.properties.Dokumentgruppe}</strong>
+            <hr> Wunsch:${feature.properties.Segment}`)
+        },
+        pointToLayer: (geoJSONPoint, latlng) => {
+            return L.marker(latlng,)
+        }
+    }).addTo(overlays.FussRad);
+}*/
+
 /* L.geoJSON(ORTE).addTo(map);
 
 function onEachFeature(feature, layer) {
