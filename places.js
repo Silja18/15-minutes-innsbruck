@@ -30,10 +30,10 @@ let layerControl = L.control.layers({
 L.geoJSON(ORTE).addTo(map);
 
 function onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties.DOKUMENTNAME) {
+    if (feature.properties && feature.properties.Dokumentname) {
         layer.bindPopup(`
-        <h2>Stadtteil:</h2> ${feature.properties.DOKUMENTGRUPPE}
-        <h3>Wunsh:</h3> ${feature.properties.SEGMENT}
+        <h2>Stadtteil:</h2> ${feature.properties.Dokumentgruppe}
+        <h3>Wunsh:</h3> ${feature.properties.Segment}
         `);
     } 
 }
