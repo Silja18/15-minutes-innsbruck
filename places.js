@@ -11,7 +11,8 @@ let baselayers = {
 let overlays = {
     FussRad: L.featureGroup(),
     Rad: L.featureGroup(),
-    Fuss: L.featureGroup()
+    Fuss: L.featureGroup(),
+    Tempo: L.featureGroup()
 };
 
 // Karte initialisieren
@@ -32,7 +33,8 @@ let layerControl = L.control.layers({
 }, {
     "Vorschläge Fuß und Rad": overlays.FussRad,
     "Vorschläge Radfahren": overlays.Rad,
-    "Vorschläge Gehen": overlays.Fuss
+    "Vorschläge Gehen": overlays.Fuss,
+    "Vorschläge Geschwindigkeitsbegrenzung etc.": overlays.Tempo
 }
 )
 .addTo(map);
@@ -42,6 +44,7 @@ let layerControl = L.control.layers({
 overlays.FussRad.addTo(map);
 overlays.Rad.addTo(map);
 overlays.Fuss.addTo(map);
+overlays.Tempo.addTo(map)
 
 // Fuß und Raffahren Layer
 L.geoJSON(FUSSRAD).addTo(overlays.FussRad);
@@ -88,6 +91,9 @@ function onEachFeature(feature, layer) {
 L.geoJSON(FUSS, {
     onEachFeature: onEachFeature
 }).addTo(overlays.Fuss);
+
+// Tempo Layer
+
 
 
 /*let drawFussRad = (geojsonData) => {

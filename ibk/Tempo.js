@@ -1,4 +1,4 @@
-const OFFIS = [{
+const TEMPO = [{
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",
