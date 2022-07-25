@@ -35,7 +35,8 @@ let layerControl = L.control.layers({
     "Vorschläge Fuß und Rad": overlays.FussRad,
     "Vorschläge Radfahren": overlays.Rad,
     "Vorschläge Gehen": overlays.Fuss,
-    "Vorschläge Geschwindigkeitsbegrenzung etc.": overlays.Tempo
+    "Vorschläge Geschwindigkeitsbegrenzung etc.": overlays.Tempo,
+    "Radmasterplan Innsbruck 2030": overlays.Radmasterplan
 }
 )
 .addTo(map);
@@ -112,20 +113,26 @@ L.geoJSON(TEMPO, {
 
 // Radmasterplan Layer
 
-L.geoJSON(RADMASTERPLAN).addTo(overlays.Radmasterplan);
-
-function onEachFeature (feature, layer) {
-    if (feature.properties && feature.properties.Ort) {
-        layer.bindPopup(`
-        <h2>${feature.properties.Ort}</h2>
-        <h3>${feature.properties.Nummer}</h3>
-        `);
+L.geoJSON(RADMASTERPLAN,
+    function onEachFeature (feature, layer) {
+        if (feature.properties && feature.properties.Ort) {
+            layer.bindPopup(`
+            <h2>${feature.properties.Ort}</h2>
+            <h3>${feature.properties.Nummer}</h3>
+            `);
+        }
+    },
+    {
+        onEachFeature: onEachFeature
     }
-}
+    ).addTo(overlays.Radmasterplan);
 
-L.geoJSON(RADMASTERPLAN, {
+
+
+/*L.geoJSON(RADMASTERPLAN, {
     onEachFeature: onEachFeature
 }).addTo(overlays.Radmasterplan);
+
 /*let drawFussRad = (geojsonData) => {
     L.geoJson(geojsonData, {
         onEachFeature: (feature, layer) => {
