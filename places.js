@@ -12,7 +12,8 @@ let overlays = {
     FussRad: L.featureGroup(),
     Rad: L.featureGroup(),
     Fuss: L.featureGroup(),
-    Tempo: L.featureGroup()
+    Tempo: L.featureGroup(),
+    Radmasterplan: L.featureGroup()
 };
 
 // Karte initialisieren
@@ -44,7 +45,8 @@ let layerControl = L.control.layers({
 overlays.FussRad.addTo(map);
 overlays.Rad.addTo(map);
 overlays.Fuss.addTo(map);
-overlays.Tempo.addTo(map)
+overlays.Tempo.addTo(map);
+overlays.Radmasterplan.addTo(map)
 
 // Fuß und Raffahren Layer
 L.geoJSON(FUSSRAD).addTo(overlays.FussRad);
@@ -108,6 +110,22 @@ L.geoJSON(TEMPO, {
     onEachFeature: onEachFeature
 }).addTo(overlays.Tempo);
 
+// Radmasterplan Layer
+
+L.geoJSON(RADMASTERPLAN).addTo(overlays.Radmasterplan);
+
+function onEachFeature (feature, layer) {
+    if (feature.properties && feature.properties.Ort) {
+        layer.bindPopup(`
+        <h2>${feature.properties.Ort}</h2>
+        <h3>${feature.properties.Nummer}</h3>
+        `);
+    }
+}
+
+L.geoJSON(RADMASTERPLAN, {
+    onEachFeature: onEachFeature
+}).addTo(overlays.Radmasterplan);
 /*let drawFussRad = (geojsonData) => {
     L.geoJson(geojsonData, {
         onEachFeature: (feature, layer) => {
